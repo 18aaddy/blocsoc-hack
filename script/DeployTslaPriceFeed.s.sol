@@ -10,7 +10,7 @@ contract DeployTslaPriceFeed is Script {
     address constant functionsRouter =
         0xb83E47C2bC239B3bf370bc41e1459A34b41238D0;
     uint64 constant subId = 3124;
-    uint64 secretVersion = 1719262622;
+    uint64 secretVersion = 1719217730;
     uint8 secretSlot = 0;
     bytes32 donId =
         0x66756e2d657468657265756d2d7365706f6c69612d3100000000000000000000;

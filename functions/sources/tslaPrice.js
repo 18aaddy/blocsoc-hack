@@ -16,15 +16,20 @@ if (apiResponse.error) {
 
 const { data } = apiResponse;
 
-// Validate the response structure
-if (!data || !data.quote || !data.quote.ap) {
+if (!data || !data.quote) {
     throw Error("Invalid response structure from Alpaca.");
 }
 
-const latestPrice = data.quote.ap;
+let latestPrice = data.quote.ap;
 
-// Log the latest price
+if (latestPrice === 0) {
+    latestPrice = data.quote.bp;
+}
+
+if (latestPrice === 0) {
+    throw Error("Both ask price and bid price are zero. No valid price available.");
+}
+
 console.log(`The latest price of TSLA is $${latestPrice}`);
 
-// Encode and return the latest price as a Uint256
 return Functions.encodeUint256(Math.round(latestPrice * 1e8));
