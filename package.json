@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@api/testalpacadocs": "file:.api/apis/testalpacadocs",
+    "@chainlink/functions-toolkit": "^0.2.8",
+    "node-fetch": "^3.3.2"
+  },
+  "type": "commonjs"
+}
