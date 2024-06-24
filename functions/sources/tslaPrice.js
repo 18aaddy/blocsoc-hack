@@ -27,4 +27,4 @@ const latestPrice = data.quote.ap;
 console.log(`The latest price of TSLA is $${latestPrice}`);
 
 // Encode and return the latest price as a Uint256
-return Functions.encodeUint256(Math.round(latestPrice * 1e18));
+return Functions.encodeUint256(Math.round(latestPrice * 1e8));
