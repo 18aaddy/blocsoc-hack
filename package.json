@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@chainlink/functions-toolkit": "^0.2.8",
+    "ethers": "^5.5.4"
+  },
+
+  "scripts": {
+    "simulate": "bash -c 'source .env && node ./functions/simulators/alpacaMintSimulator.js'",
+    "simulatePrice": "bash -c 'source .env && node ./functions/simulators/alpacaPriceSimulator.js'",
+    "uploadSecrets": "bash -c 'source .env && node ./functions/uploadSecrets.js'"
+  }
+}
